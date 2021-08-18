@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "374707757160",
-    "project_id": "borrowingboard",
-    "storage_bucket": "borrowingboard.appspot.com"
+    "project_number": "572155851441",
+    "project_id": "borrow-board",
+    "storage_bucket": "borrow-board.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:374707757160:android:0f9db788693470ea5e1bdd",
+        "mobilesdk_app_id": "1:572155851441:android:ccee4ac1bb22322803e890",
         "android_client_info": {
           "package_name": "org.techtown.borrowing"
         }
       },
       "oauth_client": [
         {
-          "client_id": "374707757160-u6h62embcu27r6pjiu7ukdk5nv6e5avc.apps.googleusercontent.com",
+          "client_id": "572155851441-gjif5aurfqa7op7u9qh86pmb1cgk57st.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBClCpOfk4-RpyPItzTrzEiuDLl9Kzan2E"
+          "current_key": "AIzaSyC39pppMRGt0jiYv6128hunv2mt9pXlyYU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "374707757160-u6h62embcu27r6pjiu7ukdk5nv6e5avc.apps.googleusercontent.com",
+              "client_id": "572155851441-gjif5aurfqa7op7u9qh86pmb1cgk57st.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
