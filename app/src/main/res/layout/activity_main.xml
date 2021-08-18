@@ -23,25 +23,40 @@
         app:layout_constraintTop_toBorromof="@+id/svSearch"/>
 
 
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        tools:ignore="DuplicateIds">
 
-        <include
-            android:id="@+id/container"
-            layout="@layout/underbar"/>
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#DAE8FC"
+            app:itemIconTint="@color/black"
+            app:labelVisibilityMode="unlabeled"
+            app:menu="@menu/bottom_menu"
+            tools:ignore="DuplicateIds"/>
 
 
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/main_write_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#FDE6A0"
+            android:src="@drawable/ic_baseline_mode_edit_24" />
 
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/main_write_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:backgroundTint="#FDE6A0"
-        android:src="@drawable/ic_baseline_mode_edit_24" />
+    </FrameLayout>
+
 
 </RelativeLayout>
+

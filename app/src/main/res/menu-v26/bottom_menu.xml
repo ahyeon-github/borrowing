@@ -4,39 +4,38 @@
 
     <item
         android:id="@+id/first_tab"
-        app:showAsAction="ifRoom"
+        app:showAsAction="always"
         android:enabled="true"
         android:iconTint="@color/black"
-        android:icon="@drawable/ic_home_foreground"
-        app:drawableStartCompat="@drawable/ic_home_foreground_24"
+        android:icon="@drawable/ic_home"
         android:title="홈"/>
 
     <item
         android:id="@+id/second_tab"
         app:showAsAction="always"
         android:enabled="true"
-        android:icon="@drawable/ic_shopping_cart_foreground_24"
+        android:icon="@drawable/ic_shopping_cart"
         android:title="공구 해요"/>
 
     <item
         android:id="@+id/third_tab"
         app:showAsAction="always"
         android:enabled="true"
-        android:icon="@drawable/ic_product_foreground_24"
+        android:icon="@drawable/ic_product"
         android:title="빌려요"/>
 
     <item
         android:id="@+id/fourth_tab"
-        app:showAsAction="ifRoom"
+        app:showAsAction="always"
         android:enabled="true"
-        android:icon="@drawable/ic_handshake_foregroun_24"
+        android:icon="@drawable/ic_handshake"
         android:title="같이 가요"/>
 
     <item
         android:id="@+id/fifth_tab"
         android:enabled="true"
-        android:icon="@drawable/ic_ic_mail_foreground_24"
+        android:icon="@drawable/ic_mail"
         android:title="쪽지"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="always" />
 
 </menu>
