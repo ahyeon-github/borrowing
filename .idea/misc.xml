@@ -20,10 +20,11 @@
         <entry key="app/src/main/res/drawable/ic_product_foreground_24.xml" value="0.16574074074074074" />
         <entry key="app/src/main/res/drawable/ic_shopping_cart_foreground.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_shopping_cart_foreground_24.xml" value="0.16574074074074074" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_write.xml" value="0.335" />
         <entry key="app/src/main/res/layout/item_main.xml" value="0.2526041666666667" />
         <entry key="app/src/main/res/layout/toolbar.xml" value="0.24062843520514318" />
+        <entry key="app/src/main/res/layout/underbar.xml" value="0.25226449275362317" />
         <entry key="app/src/main/res/menu-v26/bottom_menu.xml" value="0.16614583333333333" />
         <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.25729166666666664" />
         <entry key="app/src/main/res/menu/menu.xml" value="0.23489583333333333" />
