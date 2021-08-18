@@ -2,6 +2,7 @@ package org.techtown.borrowing;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -138,7 +139,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 mTitleTextView = itemView.findViewById(R.id.item_title_text);
                 mNameTextView = itemView.findViewById(R.id.item_name_text);
-
 
 
 
