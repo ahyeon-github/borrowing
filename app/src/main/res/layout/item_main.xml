@@ -37,6 +37,7 @@
             tools:ignore="HardcodedText"
             app:drawableStartCompat="@drawable/ic_baseline_person_24" />
 
+
     </LinearLayout>
 
 
