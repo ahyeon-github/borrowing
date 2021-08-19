@@ -23,6 +23,8 @@ public class WriteActivity extends AppCompatActivity implements View.OnClickList
     private EditText mWriteContentsText;
     private EditText mWriteNameText;
 
+    private String id;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +40,7 @@ public class WriteActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View v) {
-        String id = mStore.collection("board").document().getId();
+        id = mStore.collection("board").document().getId();
 
         Map<String,Object> post = new HashMap<>();
         post.put("id", "id");

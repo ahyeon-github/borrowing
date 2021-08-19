@@ -16,6 +16,8 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
@@ -37,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
 
 
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -50,33 +53,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mStore.collection("board")
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
 
-            @Override
-            public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException error) {
-                for( DocumentChange dc : queryDocumentSnapshots.getDocumentChanges())  {
-                    String id = (String) dc.getDocument().getData().get("id");
-                    String title=(String) dc.getDocument().get("title");
-                    String contents = (String)dc.getDocument().get("contents");
-                    String name = (String) dc.getDocument().getData().get("name");
-                    Board data = new Board(id, title, contents, name);
+                    @Override
+                    public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException error) {
+                        for( DocumentChange dc : queryDocumentSnapshots.getDocumentChanges())  {
+                            String id = (String) dc.getDocument().getData().get("id");
+                            String title=(String) dc.getDocument().get("title");
+                            String contents = (String)dc.getDocument().get("contents");
+                            String name = (String) dc.getDocument().getData().get("name");
+                            Board data = new Board(id, title, contents, name);
 
-                    mBoardList.add(data);
+                            mBoardList.add(data);
 
 
-                }
-
-            }
-        });
+                        }
+                    }
+                });
 
         mStore.collection("board").get()
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()){
                         for (DocumentSnapshot document : Objects.requireNonNull(task.getResult())){
-                            //mBoardList.add(new Board(null,"공구 빌려주실 분 있나요?",null, "눈송이"));
-                            //mBoardList.add(new Board(null,"자전거에펌프 대여받을 수 있나요?",null, "server"));
-                            //mBoardList.add(new Board(null,"눈 오리집게 빌려드려요",null, "솜사탕"));
-                            //mBoardList.add(new Board(null,"캐리어 대여해주실 분 계신가요?",null, "자바"));
-                            //mBoardList.add(new Board(null,"몽키스패너 필요해요",null, "안드로이드"));
-
                         }
 
                         MainAdapter mAdapter = new MainAdapter(mBoardList);
@@ -111,11 +107,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             holder.mTitleTextView.setText(data.getTitle());
             holder.mNameTextView.setText(data.getName());
 
-            Toolbar toolbar = findViewById(R.id.toolbar);
-            setSupportActionBar(toolbar);
-            ActionBar ab = getSupportActionBar();
-            ab.setDisplayShowCustomEnabled(true);
-            ab.setDisplayShowTitleEnabled(false);
 
         }
 
